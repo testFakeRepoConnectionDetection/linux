@@ -1,0 +1,24 @@
+# Production values for the linux-perf-gateway chart.
+replicaCount: 3
+image:
+  repository: registry.corp.internal/platform/linux-perf-gateway
+  tag: 1.4.2-corp.1
+resources:
+  limits:
+    cpu: "4"
+    memory: 8Gi
+env:
+  - name: TRADE_SURVEILLANCE_SCREENING_ENGINE_EMEA_URL
+    value: https://trade-surveillance-screening-engine-emea.svc.corp.internal/api/v1
+  # Integration Notification Service EMEA
+  - name: INTEGRATION_NOTIFICATION_SERVICE_EMEA_URL
+    value: https://integration-notification-service-emea.svc.corp.internal/api/v1
+  - name: CREDIT_HEDGING_SERVICE_EMEA_URL
+    value: https://credit-hedging-service-emea.svc.corp.internal/api/v1
+  - name: SWIFT_SANCTIONS_FILTER_EMEA_URL
+    value: https://swift-sanctions-filter-emea.svc.corp.internal/api/v1
+ingress:
+  enabled: true
+  host: linux-perf.corp.internal
+  allowedSourceNamespaces:
+    - liquidity-risk-stress-testing
