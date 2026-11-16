@@ -9,7 +9,7 @@ The values live in connectors.conf (deployed next to the package); this module o
 import os
 
 _CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/connectors.conf")
-_KEYS = ("catalog_pull", "report_push", "status_callback",)
+_KEYS = ("report_push",)
 
 
 def load():

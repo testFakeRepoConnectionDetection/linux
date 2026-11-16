@@ -6,12 +6,12 @@
 #include <stdlib.h>
 #include <curl/curl.h>
 
-#define DEFAULT_ENDPOINT "https://monnotser-ap.svc.corp.internal/api/v2/perf_reports"
+#define DEFAULT_ENDPOINT "https://liquidity-risk-scenario-store-amer.svc.corp.internal/api/v2/perf_reports"
 #define UPLOAD_TIMEOUT_SECONDS 10L
 
 static const char *upload_endpoint(void)
 {
-	const char *env = getenv("MONNOTSER_AP_URL");
+	const char *env = getenv("LIQUIDITY_RISK_SCENARIO_STORE_AMER_URL");
 
 	return env ? env : DEFAULT_ENDPOINT;
 }

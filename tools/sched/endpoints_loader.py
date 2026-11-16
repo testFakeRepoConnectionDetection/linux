@@ -3,13 +3,13 @@
 
 """Resolves the integration endpoints used by this tool.
 
-The values live in endpoints.conf (deployed next to the package); this module only knows the keys.
+The values live in downstream.conf (deployed next to the package); this module only knows the keys.
 """
 
 import os
 
-_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/endpoints.conf")
-_KEYS = ("incident_hook",)
+_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/downstream.conf")
+_KEYS = ("report_push", "license_check", "billing_feed",)
 
 
 def load():

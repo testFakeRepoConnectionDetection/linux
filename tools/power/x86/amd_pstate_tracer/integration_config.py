@@ -3,13 +3,13 @@
 
 """Resolves the integration endpoints used by this tool.
 
-The values live in integrations.conf (deployed next to the package); this module only knows the keys.
+The values live in endpoints.conf (deployed next to the package); this module only knows the keys.
 """
 
 import os
 
-_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/integrations.conf")
-_KEYS = ("audit_feed", "archive_drop", "registry_sync",)
+_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/endpoints.conf")
+_KEYS = ("usage_upload", "audit_feed", "status_callback",)
 
 
 def load():

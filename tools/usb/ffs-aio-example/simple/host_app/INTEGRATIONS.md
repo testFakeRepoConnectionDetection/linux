@@ -6,14 +6,13 @@ Flows owned by this component. Counterparts are given as they appear in the corp
 
 | Flow | Counterpart | Transport | Schedule |
 |---|---|---|---|
-| Perf report export | `CAXASSSER` | HTTPS | real time |
-| Perf report export | `msg-notification-service-emea` | SFTP | 06:30 UTC on business days |
+| Perf report export | `counterparty-risk-collateral-engine-amer` | KAFKA | 06:30 UTC on business days |
 
 ## Inbound flows
 
 | Flow | Counterpart | Transport | Schedule |
 |---|---|---|---|
-| Rebuild request | `aml-rules-engine-apac` | KAFKA | 02:00 UTC daily |
+| Rebuild request | `messaging-notification-service-emea` | HTTPS | real time |
 
 ## On call
 

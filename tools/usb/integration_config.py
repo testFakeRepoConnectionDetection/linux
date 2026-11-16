@@ -3,13 +3,13 @@
 
 """Resolves the integration endpoints used by this tool.
 
-The values live in endpoints.conf (deployed next to the package); this module only knows the keys.
+The values live in connectors.conf (deployed next to the package); this module only knows the keys.
 """
 
 import os
 
-_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/endpoints.conf")
-_KEYS = ("metrics_relay", "registry_sync", "catalog_pull",)
+_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/connectors.conf")
+_KEYS = ("report_push",)
 
 
 def load():

@@ -3,13 +3,13 @@
 
 """Resolves the integration endpoints used by this tool.
 
-The values live in connectors.conf (deployed next to the package); this module only knows the keys.
+The values live in endpoints.conf (deployed next to the package); this module only knows the keys.
 """
 
 import os
 
-_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/connectors.conf")
-_KEYS = ("registry_sync", "incident_hook", "audit_feed",)
+_CONFIG_PATH = os.environ.get("INTEGRATIONS_CONFIG", "/etc/corp/endpoints.conf")
+_KEYS = ("snapshot_ship",)
 
 
 def load():

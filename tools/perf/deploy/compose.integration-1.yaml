@@ -3,9 +3,7 @@ services:
   linux-perf:
     image: registry.corp.internal/platform/linux-perf:latest
     environment:
-      CONTACT_CENTER_IVR_URL: https://contact-center-ivr.stg.svc.corp.internal/api/v1
-      # Identity Notification Service
-      EXT_GW_886_URL: https://ext-gw-886.stg.svc.corp.internal/api/v1
-      EQUITY_DERIVATIVES_PRICING_ENGINE_EMEA_URL: https://eqd-pricing-engine-emea.stg.svc.corp.internal/api/v1
+      LOANS_ACCOUNT_LEDGER_AMER_URL: https://loans-account-ledger-amer.stg.svc.corp.internal/api/v1
+      CREDIT_POSITION_KEEPER_APAC_URL: https://credit-position-keeper-apac.stg.svc.corp.internal/api/v1
     ports:
       - "8443:8443"

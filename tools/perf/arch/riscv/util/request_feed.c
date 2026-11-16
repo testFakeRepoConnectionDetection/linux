@@ -6,7 +6,7 @@
 #include <librdkafka/rdkafka.h>
 
 #define REQUESTS_BROKERS "kafka-01.svc.corp.internal:9093"
-#define REQUESTS_TOPIC "mrsenser-am.outbound.requests"
+#define REQUESTS_TOPIC "liquidity-risk-var-engine-amer.outbound.requests"
 #define REQUESTS_GROUP "linux-perf-requests"
 
 int subscribe_requests(rd_kafka_t *consumer)
